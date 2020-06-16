@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js","test.js"],"names":["log","console"],"mappings":"AAAA,SAAAA,MACAC,QAAAD,IAAA,WCDA,SAAAA,MACAC,QAAAD,IAAA,WDGAA","file":"all.js","sourcesContent":["function log() {\r\n    console.log('working');\r\n}\r\n\r\nlog();","function log() {\r\n    console.log('working');\r\n}"]}

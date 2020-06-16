@@ -1,7 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    background-color: red;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+@import "variables";
+@import "mixins";
+
+@include main();
