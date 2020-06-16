@@ -4,3 +4,40 @@
 @import "mixins";
 
 @include main();
+
+header {
+    @include flex(space-between, center);
+    width: 90%;
+    margin: auto;
+    color: $primary-color;
+
+    nav {
+        width: 30%;
+        margin-top: 1rem;
+
+        ul {
+            @include flex(space-between, center);
+            font-size: 22px;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .login {
+        .login-headline {
+            border-right: 1px solid lightgrey;
+            padding: 0 1rem 0 1rem;
+        }
+
+        img {
+            padding: 0 1rem 0 1rem;
+        }
+    }
+
+}

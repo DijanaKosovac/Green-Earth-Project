@@ -4,3 +4,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans"; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  color: #002f9a; }
+  header nav {
+    width: 30%;
+    margin-top: 1rem; }
+    header nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 22px; }
+      header nav ul li {
+        list-style-type: none; }
+        header nav ul li a {
+          text-decoration: none; }
+  header .login .login-headline {
+    border-right: 1px solid lightgrey;
+    padding: 0 1rem 0 1rem; }
+  header .login img {
+    padding: 0 1rem 0 1rem; }

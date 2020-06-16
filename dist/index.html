@@ -6,10 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
     <link rel="stylesheet" href="../dist/assets/css/style.css">
+
 </head>
 
 <body>
-    <p>Test</p>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="images/logo.png" alt="logo"></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <aside class="login">
+            <span class="login-headline">LOGIN</span>
+            <img src="images/Flag_of_the_United_Kingdom.png" alt="flag">
+            <span>EN - UK (£)</span>
+        </aside>
+    </header>
+    <section class="carousel">
+        <div id="carousel-slide">
+
+        </div>
+
+    </section>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous">
+            $(document).ready(function () {
+                console.log('kebab')
+                updateDiv();
+
+
+            });
+            function updateDiv() {
+
+                $.getJSON('details.json', function (data) {
+
+                    console.log(data);
+
+
+                });
+
+            }
+        </script>
 </body>
 
 </html>
