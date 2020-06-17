@@ -45,7 +45,7 @@ header {
     width: 100%;
     height: 80vh;
     margin-top: 1rem;
-    color: $main-headline;
+    color: $white;
 
     .img-container {
         @include flex(center, center, wrap);
@@ -142,9 +142,64 @@ header {
             }
         }
     }
+}
 
-    .offers {
-        background-color: $secondary-blue;
-        width: 100%;
+.offers {
+    background-color: $secondary-blue;
+    margin: 0 auto;
+    padding: 2.8rem;
+
+    .offer-showcase {
+        width: 90%;
+        margin: auto;
+
+        h5 {
+            font-size: 20px;
+            font-weight: 100;
+            color: $white;
+            margin-bottom: 1.5rem;
+        }
+
+        .offer-container {
+            @include flex(space-between, center, wrap);
+
+            .offer {
+                width: 20%;
+                background-color: $white;
+
+                .city {
+                    width: 100%;
+                    height: 170px;
+                    object-fit: cover;
+
+                }
+
+                .offer-info {
+                    padding: 2rem 2rem;
+                    color: $ternary-blue;
+
+                    h3 {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .show-more {
+                    @include flex(end, baseline, wrap);
+                    margin-top: 1rem;
+
+                    span {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-right: 1rem;
+                        color: $secondary-blue;
+                    }
+                }
+            }
+        }
     }
 }
