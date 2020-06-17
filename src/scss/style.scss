@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 @import "variables";
 @import "mixins";
@@ -6,17 +6,17 @@
 @include main();
 
 header {
-    @include flex(space-between, center);
+    @include flex(space-between, center, wrap);
     width: 90%;
     margin: auto;
-    color: $primary-color;
+    color: $primary-blue;
 
     nav {
         width: 30%;
         margin-top: 1rem;
 
         ul {
-            @include flex(space-between, center);
+            @include flex(space-between, center, wrap);
             font-size: 22px;
 
             li {
@@ -39,5 +39,112 @@ header {
             padding: 0 1rem 0 1rem;
         }
     }
+}
 
+.carousel {
+    width: 100%;
+    height: 80vh;
+    margin-top: 1rem;
+    color: $main-headline;
+
+    .img-container {
+        @include flex(center, center, wrap);
+        background-image: url('../images/img-1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        .headline {
+            @include flex(space-between, center, wrap);
+            width: 80%;
+            margin: auto;
+
+            .promotion {
+                width: 40%;
+
+                h1 {
+                    font-size: 50px;
+                }
+
+                p {
+                    font-size: 24px;
+                }
+
+                .btn {
+                    @include btn-style();
+                }
+            }
+
+            .nav-arrow {
+                @include flex(center, center, wrap);
+
+                .navigate {
+                    @include flex(center, center, wrap);
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 1.5rem;
+                    border-radius: 50%;
+                    border: 1px solid $arrow-background;
+                }
+            }
+        }
+    }
+}
+
+.commodity-area {
+    width: 80%;
+    margin: 4rem auto;
+    text-align: center;
+
+    span {
+        text-transform: uppercase;
+        color: $light-grey;
+
+    }
+
+    h1 {
+        font-size: 50px;
+        color: $secondary-blue;
+        margin-bottom: 2rem;
+    }
+
+    .amenities {
+        @include flex(center, center, wrap);
+        width: 100%;
+        color: $ternary-blue;
+
+        .amenity {
+            @include flex(center, center, nowrap);
+            width: 50%;
+            padding: 2rem;
+
+            .icon {
+                .icon-wrap {
+                    @include flex(center, center, nowrap);
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 3px solid $icon-wrap;
+                }
+            }
+        }
+
+        .info {
+            width: 60%;
+            text-align: justify;
+            margin-left: 2rem;
+
+            h4 {
+                font-size: 24px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .offers {
+        background-color: $secondary-blue;
+        width: 100%;
+    }
 }

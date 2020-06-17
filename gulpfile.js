@@ -23,35 +23,36 @@ function imgTask() {
     return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('dist/images'));
 }
 
-function jsTask() {
-    return src(jsPath)
-        .pipe(sourcemaps.init())
-        .pipe(concat('all.js'))
-        .pipe(terser())
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('dist/assets/js'));
-}
+// function jsTask() {
+//     return src(jsPath)
+//         .pipe(sourcemaps.init())
+//         .pipe(concat('all.js'))
+//         .pipe(terser())
+//         .pipe(sourcemaps.write('.'))
+//         .pipe(dest('dist/assets/js'));
+// }
 
-function cssTask() {
-    return src(cssPath)
-        .pipe(sourcemaps.init())
-        .pipe(concat('style.css'))
-        .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('dist/assets/css'));
-}
+// function cssTask() {
+//     return src(cssPath)
+//         .pipe(sourcemaps.init())
+//         .pipe(concat('style.css'))
+//         .pipe(postcss([autoprefixer(), cssnano()]))
+//         .pipe(sourcemaps.write('.'))
+//         .pipe(dest('dist/assets/css'));
+// }
 
 
+// ONLY FOR DEVELOPMENT
 function sassTask() {
     return src(sassPath)
         .pipe(sass())
-        .pipe(dest('dist/assets/css'))
+        .pipe(dest('src/css'))
         .pipe(browserSync.stream());
 }
 
 
 function watchTask() {
-    watch([cssPath, jsPath, sassPath], { interval: 1000 }, parallel(cssTask, jsTask, sassTask));
+    watch([cssPath, jsPath, sassPath], { interval: 1000 }, sassTask);
 }
 
 // function watch() {
@@ -66,11 +67,11 @@ function watchTask() {
 // }
 
 exports.sassTask = sassTask;
-exports.cssTask = cssTask;
-exports.jsTask = jsTask;
+
+// exports.jsTask = jsTask;
 exports.imgTask = imgTask;
 exports.default = series(
-    parallel(copyHtml, imgTask, jsTask, cssTask, sassTask),
+    parallel(copyHtml, imgTask, sassTask),
     watchTask
 );
 // exports.watch = watch;

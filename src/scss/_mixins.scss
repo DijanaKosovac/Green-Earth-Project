@@ -7,9 +7,21 @@
     }
 }
 
-@mixin flex($justify-content, $align-items) {
+@mixin flex($justify-content, $align-items, $wrap) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
-    flex-wrap: wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin btn-style {
+    width: 180px;
+    height: 60px;
+    border: none;
+    margin-top: 1.5rem;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: $secondary-blue;
+    color: $main-headline;
+
 }
