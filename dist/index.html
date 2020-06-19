@@ -10,22 +10,24 @@
 
 <body>
     <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
         <nav>
             <ul>
-                <li><img src="images/logo.png" alt="logo"></li>
                 <li><a href="#">Info</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <aside class="login">
+                <span class="login-headline">LOGIN</span>
+                <img src="images/Flag_of_the_United_Kingdom.png" alt="flag">
+                <span>EN - UK</span> <span>(£)</span>
+            </aside>
         </nav>
-        <aside class="login">
-            <span class="login-headline">LOGIN</span>
-            <img src="images/Flag_of_the_United_Kingdom.png" alt="flag">
-            <span>EN - UK (£)</span>
-        </aside>
     </header>
     <section class="carousel">
-        <div class="img-container">
+        <div class="slide" id="slider">
             <div class="headline">
                 <div class="promotion">
                     <h1>Enjoy our hot summer deals</h1>
@@ -34,10 +36,10 @@
                 </div>
                 <div class="nav-arrow">
                     <div class="navigate">
-                        <img src="images/arrow-left.png" alt="arrow">
+                        <img id="prev" src="images/arrow-left.png" alt="arrow">
                     </div>
                     <div class="navigate">
-                        <img src="images/arrow-right.png" alt="arrow">
+                        <img id='next' src="images/arrow-right.png" alt="arrow">
                     </div>
                 </div>
             </div>
@@ -103,11 +105,196 @@
     </section>
 
     <section class="offers">
-        <h5>Showing our offers from</h5>
-
+        <div class="offer-showcase">
+            <h5>Showing our offers from</h5>
+            <div class="offer-container">
+                <figure class="offer">
+                    <img class="label" src="images/label.png" alt="label">
+                    <img class="city" src="images/london.png" alt="London">
+                    <div class="offer-info">
+                        <h3>London</h3>
+                        <p>from £59</p>
+                        <div class="show-more">
+                            <span>Book now</span> <img src="images/book-arrow.png" alt="show-more">
+                        </div>
+                    </div>
+                </figure>
+                <figure class="offer">
+                    <img class="city" src="images/Hamburg.png" alt="Hamburg">
+                    <div class="offer-info">
+                        <h3>Hamburg</h3>
+                        <p>from £79</p>
+                        <div class="show-more">
+                            <span>Book now</span> <img src="images/book-arrow.png" alt="show-more">
+                        </div>
+                    </div>
+                </figure>
+                <figure class="offer">
+                    <img class="city" src="images/Alicante.png" alt="Alicante">
+                    <div class="offer-info">
+                        <h3>Alicante</h3>
+                        <p>from £89</p>
+                        <div class="show-more">
+                            <span>Book now</span> <img src="images/book-arrow.png" alt="show-more">
+                        </div>
+                    </div>
+                </figure>
+                <figure class="offer">
+                    <img class="city" src="images/Milano.png" alt="Milano">
+                    <div class="offer-info">
+                        <h3>Milano</h3>
+                        <p>from £119</p>
+                        <div class="show-more">
+                            <span>Book now</span> <img src="images/book-arrow.png" alt="show-more">
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="inspiration">
+        <h3>Don't know where to go? <span>Let us inspire you</span></h3>
     </section>
 
+    <section class="classes">
+        <div class="classes-container">
+            <div class="class-headline">
+                <span>QUALITY FROM THE INSIDE</span>
+                <h1>Travel the way you want</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulnisi ut</p>
+            </div>
+            <p class="upgrades"><span>View all services & upgrades</span></p>
+            <section class="tabs">
+                <div class="container">
+                    <div id="tab-1" class="tab-item tab-border">
+                        <h2>Regular</h2>
+                    </div>
+                    <div id="tab-2" class="tab-item">
+                        <h2>Plus</h2>
+                    </div>
+                    <div id="tab-3" class="tab-item">
+                        <h2>Premium</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="details">
+                <div id="tab-1-content" class="tab-content-item show">
+                    <div class="wrap">
+                        <div class="service">
+                            <div class="service-img">
+                            </div>
+                        </div>
+                        <div class="service">
+                            <ul>
+                                <li><img src="images/v.png" alt="v"><span class="ticked">Reclinable seats</span></li>
+                                <li> <img src="images/v.png" alt="v"><span class="ticked">1 Hand luggage</span></li>
+                                <li><img src="images/v.png" alt="v"><span class="ticked">Extra leg room</span></li>
+                            </ul>
+                        </div>
+                        <div class="service">
+                            <ul>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Extra cabin luggage</span>
+                                </li>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Extra hold luggage</span>
+                                </li>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Lounge access</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2-content" class="tab-content-item">
+                    <div class="wrap">
+                        <div class="service">
+                            <div class="service-img">
+                            </div>
+                        </div>
+                        <div class="service">
+                            <ul>
+                                <li><img src="images/v.png" alt="v"><span class="ticked">Reclinable seats</span></li>
+                                <li> <img src="images/v.png" alt="v"><span class="ticked">1 Hand luggage</span></li>
+                                <li><img src="images/v.png" alt="v"><span class="ticked">Extra leg room</span></li>
+                            </ul>
+                        </div>
+                        <div class="service">
+                            <ul>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Extra cabin luggage</span>
+                                </li>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Extra hold luggage</span>
+                                </li>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Lounge access</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-3-content" class="tab-content-item">
+                    <div class="wrap">
+                        <div class="service">
+                            <div class="service-img">
+                            </div>
+                        </div>
+                        <div class="service">
+                            <ul>
+                                <li><img src="images/v.png" alt="v"><span class="ticked">Reclinable seats</span></li>
+                                <li> <img src="images/v.png" alt="v"><span class="ticked">1 Hand luggage</span></li>
+                                <li><img src="images/v.png" alt="v"><span class="ticked">Extra leg room</span></li>
+                            </ul>
+                        </div>
+                        <div class="service">
+                            <ul>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Extra cabin luggage</span>
+                                </li>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Extra hold luggage</span>
+                                </li>
+                                <li><img src="images/x.png" alt="v"><span class="disabled">Lounge access</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 
+    <footer>
+        <div class="footer-container">
+            <section class="newsletter">
+                <p>Subscribe to our</p>
+                <form action="#">
+                    <input type="text" placeholder="Enter your email address">
+                    <button>Send <img src="images/arrow.png" alt="arrow"></button>
+                </form>
+            </section>
+            <section class="social-icons">
+                <p>Follow us</p>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="images/facebook.png" alt="facebook">
+                    </div>
+                    <div class="icon">
+                        <img src="images/twitter.png" alt="twitter">
+                    </div>
+                    <div class="icon">
+                        <img src="images/instagram.png" alt="instagram">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <section class="payment-methods">
+        <div class="payment-container">
+            <div class="payment-icons">
+                <img src="images/mc.png" alt="mc-icon">
+                <img src="images/visa.png" alt="visa-icon">
+                <img src="images/amex.png" alt="amex-icon">
+                <img src="images/paypal.png" alt="paypal-icon">
+            </div>
+            <div class="terms">
+                <p>Terms & Privacy</p>
+                <p>Site map</p>
+            </div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 
