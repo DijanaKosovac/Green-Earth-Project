@@ -443,6 +443,11 @@ footer {
         font-size: 30px; }
       .classes .classes-container .class-headline p {
         font-size: 18px; }
+    .classes .upgrades {
+      text-align: center; }
+    .classes .tabs,
+    .classes .details {
+      display: none; }
   footer .footer-container {
     flex-direction: column; }
     footer .footer-container .newsletter {

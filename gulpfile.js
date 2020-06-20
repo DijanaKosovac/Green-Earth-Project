@@ -1,27 +1,27 @@
-const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
-const concat = require('gulp-concat');
-const terser = require('gulp-terser');
-const sourcemaps = require('gulp-sourcemaps');
-const postcss = require('gulp-postcss');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
-const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
-const { src, series, parallel, dest, watch } = require('gulp');
+// const gulp = require('gulp');
+// const imagemin = require('gulp-imagemin');
+// const concat = require('gulp-concat');
+// const terser = require('gulp-terser');
+// const sourcemaps = require('gulp-sourcemaps');
+// const postcss = require('gulp-postcss');
+// const cssnano = require('cssnano');
+// const autoprefixer = require('autoprefixer');
+// const sass = require('gulp-sass');
+// const browserSync = require('browser-sync').create();
+// const { src, series, parallel, dest, watch } = require('gulp');
 
-const jsPath = 'src/js/**/*.js';
-const cssPath = 'src/css/**/*.css';
-const sassPath = 'src/scss/**/*.scss';
+// const jsPath = 'src/js/**/*.js';
+// const cssPath = 'src/css/**/*.css';
+// const sassPath = 'src/scss/**/*.scss';
 
 
-function copyHtml() {
-    return src('src/*.html').pipe(gulp.dest('dist'));
-}
+// function copyHtml() {
+//     return src('src/*.html').pipe(gulp.dest('dist'));
+// }
 
-function imgTask() {
-    return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('dist/images'));
-}
+// function imgTask() {
+//     return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('dist/images'));
+// }
 
 // function jsTask() {
 //     return src(jsPath)
@@ -43,17 +43,17 @@ function imgTask() {
 
 
 // ONLY FOR DEVELOPMENT
-function sassTask() {
-    return src(sassPath)
-        .pipe(sass())
-        .pipe(dest('src/css'))
-        .pipe(browserSync.stream());
-}
+// function sassTask() {
+//     return src(sassPath)
+//         .pipe(sass())
+//         .pipe(dest('src/css'))
+//         .pipe(browserSync.stream());
+// }
 
 
-function watchTask() {
-    watch([cssPath, jsPath, sassPath], { interval: 1000 }, sassTask);
-}
+// function watchTask() {
+//     watch([cssPath, jsPath, sassPath], { interval: 1000 }, sassTask);
+// }
 
 // function watch() {
 //     browserSync.init({
@@ -66,12 +66,40 @@ function watchTask() {
 //     gulp.watch(jsPath, jsTask).on('change', browserSync.reload);
 // }
 
-exports.sassTask = sassTask;
+// exports.sassTask = sassTask;
 
 // exports.jsTask = jsTask;
-exports.imgTask = imgTask;
-exports.default = series(
-    parallel(copyHtml, imgTask, sassTask),
-    watchTask
-);
+// exports.imgTask = imgTask;
+// exports.default = series(
+//     parallel(copyHtml, imgTask, sassTask),
+//     watchTask
+// );
 // exports.watch = watch;
+
+
+// new gulp
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync').create();
+
+
+function style() {
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('src/css'))
+        .pipe(browserSync.stream());
+}
+
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: 'src/.'
+        }
+    });
+    gulp.watch('src/scss/**/*.scss', style);
+    gulp.watch('src/**.html').on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+}
+
+exports.style = style;
+exports.watch = watch;
