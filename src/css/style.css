@@ -34,24 +34,23 @@ header {
         header nav ul li a {
           text-decoration: none; }
   header .login .login-headline {
-    border-right: 1px solid lightgrey;
-    padding: 0 1rem 0 1rem; }
+    border-right: 1px solid #7e7e7e;
+    padding: 0 1rem; }
   header .login img {
-    padding: 0 1rem 0 1rem; }
+    padding: 0 1rem; }
 
 .carousel {
   width: 100%;
   height: 90vh;
   margin-top: 1rem;
   color: #fff;
-  position: relative;
   overflow: hidden; }
   .carousel .slide {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/a.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/carousel-img1.png");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +92,8 @@ header {
           height: 50px;
           margin-left: 1.5rem;
           border-radius: 50%;
-          border: 1px solid #d3d3d3; }
+          border: 1px solid #d3d3d3;
+          cursor: pointer; }
 
 .commodity-area {
   width: 80%;
@@ -223,7 +223,7 @@ header {
     .classes .upgrades span {
       border-bottom: 4px dashed #38bdff; }
   .classes .tabs {
-    background: #f0f0f0; }
+    background: #F0F0F0; }
     .classes .tabs .container {
       display: flex;
       justify-content: space-between;
@@ -245,7 +245,7 @@ header {
           font-weight: 400; }
       .classes .tabs .container .tab-border {
         border-top: 8px solid #38bdff;
-        color: #002f9d !important;
+        color: #002f9d;
         background-color: #fff;
         font-weight: bold; }
   .classes #tab-1-content,
@@ -285,8 +285,7 @@ header {
             padding-left: 0.5rem;
             color: #b3b8bd; }
   .classes .show {
-    display: block !important;
-    opacity: 1 !important; }
+    display: block !important; }
 
 footer {
   width: 100%;

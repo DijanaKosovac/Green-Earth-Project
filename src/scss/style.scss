@@ -7,7 +7,7 @@
 
 header {
     @include flex(space-between, center, wrap);
-    width: 90%;
+    width: $main-container-width;
     margin: auto;
     color: $primary-blue;
 
@@ -19,7 +19,7 @@ header {
 
     nav {
         @include flex(space-between, center, wrap);
-        width: 90%;
+        width: $main-container-width;
         margin-top: 1rem;
 
         ul {
@@ -39,12 +39,12 @@ header {
 
     .login {
         .login-headline {
-            border-right: 1px solid lightgrey;
-            padding: 0 1rem 0 1rem;
+            border-right: 1px solid $light-grey;
+            padding: 0 1rem;
         }
 
         img {
-            padding: 0 1rem 0 1rem;
+            padding: 0 1rem;
         }
     }
 }
@@ -53,18 +53,15 @@ header {
     width: 100%;
     height: 90vh;
     margin-top: 1rem;
-    color: $white;
-    position: relative;
+    color: $base-white;
     overflow: hidden;
 
     .slide {
         @include flex(center, center, wrap);
         background-image:
             linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url('../images/a.png');
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+            url('../images/carousel-img1.png');
+        @include background-image(bottom, no-repeat, cover);
         width: 100%;
         height: 100%;
 
@@ -77,7 +74,7 @@ header {
                 width: 40%;
 
                 h1 {
-                    font-size: 50px;
+                    font-size: $main-headline-size;
                 }
 
                 p {
@@ -99,6 +96,7 @@ header {
                     margin-left: 1.5rem;
                     border-radius: 50%;
                     border: 1px solid $arrow-background;
+                    cursor: pointer;
                 }
             }
         }
@@ -114,11 +112,10 @@ header {
     span {
         text-transform: uppercase;
         color: $light-grey;
-
     }
 
     h1 {
-        font-size: 50px;
+        font-size: $main-headline-size;
         color: $secondary-blue;
         margin-bottom: 2rem;
     }
@@ -139,7 +136,7 @@ header {
                     width: 100px;
                     height: 100px;
                     border-radius: 50%;
-                    border: 3px solid $icon-wrap;
+                    border: 3px solid $secondary-base-white;
                 }
             }
         }
@@ -163,13 +160,13 @@ header {
     padding: 2.8rem;
 
     .offer-showcase {
-        width: 90%;
+        width: $main-container-width;
         margin: auto;
 
         h5 {
             font-size: 20px;
             font-weight: 100;
-            color: $white;
+            color: $base-white;
             margin-bottom: 1.5rem;
         }
 
@@ -178,7 +175,7 @@ header {
 
             .offer {
                 width: 20%;
-                background-color: $white;
+                background-color: $base-white;
 
                 .label {
                     position: absolute;
@@ -189,7 +186,6 @@ header {
                     width: 100%;
                     height: 170px;
                     object-fit: cover;
-
                 }
 
                 .offer-info {
@@ -250,11 +246,11 @@ header {
             width: 60%;
             margin: 3rem auto;
             text-align: center;
-            color: $white;
+            color: $base-white;
 
             h1 {
-                color: $classes-headline;
-                font-size: 50px;
+                color: $skyblue;
+                font-size: $main-headline-size;
             }
 
             p {
@@ -262,22 +258,21 @@ header {
                 margin-top: 2rem;
             }
         }
-
     }
 
     .upgrades {
-        color: $classes-headline;
+        color: $skyblue;
         font-size: 20px;
         text-align: end;
         margin: 2rem;
 
         span {
-            border-bottom: 4px dashed $classes-headline;
+            border-bottom: 4px dashed $skyblue;
         }
     }
 
     .tabs {
-        background: #f0f0f0;
+        background: $secondary-base-white;
 
         .container {
             @include flex(space-between, center, nowrap);
@@ -295,16 +290,14 @@ header {
                     font-size: 32px;
                     font-weight: 400;
                 }
-
             }
 
             .tab-border {
-                border-top: 8px solid $classes-headline;
-                color: $secondary-blue !important;
-                background-color: $white;
+                border-top: 8px solid $skyblue;
+                color: $secondary-blue;
+                background-color: $base-white;
                 font-weight: bold;
             }
-
         }
     }
 
@@ -316,7 +309,7 @@ header {
 
     .wrap {
         @include flex(space-between, center, nowrap);
-        background: $white;
+        background: $base-white;
         padding: 1rem;
         margin-bottom: 3rem;
 
@@ -357,21 +350,19 @@ header {
 
     .show {
         display: block !important;
-        opacity: 1 !important;
     }
-
 }
 
 footer {
     width: 100%;
     margin: 0 auto;
-    color: $white;
+    color: $base-white;
     background-color: $secondary-blue;
     padding: 3rem;
 
     .footer-container {
         @include flex(space-between, center, nowrap);
-        width: 90%;
+        width: $main-container-width;
         margin: auto;
 
         .newsletter {
@@ -385,7 +376,7 @@ footer {
 
             form {
                 width: 55%;
-                border-bottom: 2px solid $white;
+                border-bottom: 2px solid $base-white;
 
                 input,
                 button {
@@ -401,7 +392,7 @@ footer {
 
                 button {
                     font-size: 20px;
-                    color: $white;
+                    color: $base-white;
                     cursor: pointer;
                 }
 
@@ -435,7 +426,7 @@ footer {
 
 .payment-methods {
     padding: 2rem;
-    border-bottom: 8px solid $classes-headline;
+    border-bottom: 8px solid $skyblue;
 
     .social-icons {
         display: none;
@@ -443,7 +434,7 @@ footer {
 
     .payment-container {
         @include flex(space-between, center, wrap);
-        width: 90%;
+        width: $main-container-width;
         margin: auto;
 
         .payment-icons {
@@ -508,7 +499,7 @@ footer {
     }
 
     .commodity-area {
-        width: 90%;
+        width: $main-container-width;
 
         h1 {
             font-size: 45px;
@@ -605,13 +596,12 @@ footer {
 
                     input {
                         width: 100%;
-                        border-bottom: 2px solid $white;
-
+                        border-bottom: 2px solid $base-white;
                     }
 
                     button {
                         width: 100%;
-                        background-color: $white;
+                        background-color: $base-white;
                         color: $secondary-blue;
                         font-weight: bold;
                         font-size: 25px;
@@ -681,7 +671,6 @@ footer {
         nav {
             width: 86%;
         }
-
     }
 
     .carousel {
@@ -712,7 +701,6 @@ footer {
                 padding: 0;
             }
         }
-
     }
 
     .offers {
@@ -762,13 +750,12 @@ footer {
 
                     input {
                         width: 100%;
-                        border-bottom: 2px solid $white;
-
+                        border-bottom: 2px solid $base-white;
                     }
 
                     button {
                         width: 100%;
-                        background-color: $white;
+                        background-color: $base-white;
                         color: $secondary-blue;
                         font-weight: bold;
                         font-size: 25px;

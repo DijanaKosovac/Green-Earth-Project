@@ -22,7 +22,14 @@
     font-size: 24px;
     font-weight: bold;
     background-color: $secondary-blue;
-    color: $white;
+    color: $base-white;
+
+}
+
+@mixin background-image($background-position, $repeat, $background-size) {
+    background-position: $background-position;
+    background-repeat: $repeat;
+    background-size: $background-size;
 
 }
 

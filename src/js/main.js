@@ -54,23 +54,23 @@ arrowLeft.addEventListener("click", function () {
     }
     current--;
     if (current === 1) {
-        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/b.png') `;
+        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/carousel-img2.png') `;
     } else {
-        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/a.png') `;
+        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/carousel-img1.png') `;
     }
 });
 
 // Right arrow click
 arrowRight.addEventListener("click", function () {
     if (current === 2) {
-        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/c.png') `;
+        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/carousel-img3.png') `;
         return;
     }
     current++;
     if (current === 1) {
-        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/b.png') `;
+        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/carousel-img2.png') `;
     } else {
-        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/c.png') `;
+        slider.style.backgroundImage = `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/carousel-img3.png') `;
     }
 });
 
