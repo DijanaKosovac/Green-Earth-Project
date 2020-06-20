@@ -41,6 +41,7 @@ header {
         .login-headline {
             border-right: 1px solid $light-grey;
             padding: 0 1rem;
+            cursor: pointer;
         }
 
         img {
@@ -86,7 +87,7 @@ header {
                 }
             }
 
-            .nav-arrow {
+            .nav-arrows {
                 @include flex(center, center, wrap);
 
                 .navigate {
@@ -205,6 +206,7 @@ header {
                 .show-more {
                     @include flex(end, baseline, wrap);
                     margin-top: 1rem;
+                    cursor: pointer;
 
                     span {
                         font-size: 24px;
@@ -324,6 +326,7 @@ header {
                 font-size: 20px;
 
                 li {
+                    @include flex(start, center, nowrap);
                     margin-bottom: 1.5rem;
 
                 }
@@ -598,7 +601,7 @@ footer {
             .class-mobile {
                 @include flex(center, center, nowrap);
                 flex-direction: column;
-                width: 80%;
+                width: 90%;
                 padding: 2rem;
                 margin-bottom: 2rem;
                 border-top: 10px solid $secondary-blue;
@@ -607,7 +610,7 @@ footer {
                 h2 {
                     color: $secondary-blue;
                     font-size: 28px;
-                    margin: 1rem 0;
+                    margin: 1.5rem 0;
                 }
             }
 
@@ -617,6 +620,11 @@ footer {
 
                 ul {
                     list-style-type: none;
+
+                    li {
+                        @include flex(flex-start, center, nowrap);
+                        padding-bottom: 0.5rem;
+                    }
                 }
             }
         }

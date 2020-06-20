@@ -35,7 +35,8 @@ header {
           text-decoration: none; }
   header .login .login-headline {
     border-right: 1px solid #7e7e7e;
-    padding: 0 1rem; }
+    padding: 0 1rem;
+    cursor: pointer; }
   header .login img {
     padding: 0 1rem; }
 
@@ -77,13 +78,14 @@ header {
           font-size: 24px;
           font-weight: bold;
           background-color: #002f9d;
-          color: #fff; }
-      .carousel .slide .headline .nav-arrow {
+          color: #fff;
+          cursor: pointer; }
+      .carousel .slide .headline .nav-arrows {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap; }
-        .carousel .slide .headline .nav-arrow .navigate {
+        .carousel .slide .headline .nav-arrows .navigate {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -177,7 +179,8 @@ header {
           justify-content: end;
           align-items: baseline;
           flex-wrap: wrap;
-          margin-top: 1rem; }
+          margin-top: 1rem;
+          cursor: pointer; }
           .offers .offer-showcase .offer-container .offer .show-more span {
             font-size: 24px;
             font-weight: bold;
@@ -271,6 +274,10 @@ header {
         list-style: none;
         font-size: 20px; }
         .classes .wrap .service ul li {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          flex-wrap: nowrap;
           margin-bottom: 1.5rem; }
   .classes .classes-mobile {
     display: none; }
@@ -467,7 +474,7 @@ footer {
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
-        width: 80%;
+        width: 90%;
         padding: 2rem;
         margin-bottom: 2rem;
         border-top: 10px solid #002f9d;
@@ -475,7 +482,7 @@ footer {
         .classes .classes-mobile .class-mobile h2 {
           color: #002f9d;
           font-size: 28px;
-          margin: 1rem 0; }
+          margin: 1.5rem 0; }
       .classes .classes-mobile .mobile-info {
         display: flex;
         justify-content: flex-start;
@@ -484,6 +491,12 @@ footer {
         width: 90%; }
         .classes .classes-mobile .mobile-info ul {
           list-style-type: none; }
+          .classes .classes-mobile .mobile-info ul li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+            padding-bottom: 0.5rem; }
   footer .footer-container {
     flex-direction: column; }
     footer .footer-container .newsletter {
