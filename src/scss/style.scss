@@ -318,13 +318,6 @@ header {
             width: 33.33333%;
             padding: 2rem;
 
-            .service-img {
-                background-image: url('../images/regular-class.png');
-                background-repeat: no-repeat;
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-            }
 
             ul {
                 list-style: none;
@@ -333,24 +326,36 @@ header {
                 li {
                     margin-bottom: 1.5rem;
 
-                    .ticked {
-                        color: $primary-blue;
-                        padding-left: 1rem;
-                    }
-
-                    .disabled {
-                        padding-left: 0.5rem;
-                        color: $disabled-tabs-color;
-                    }
-
                 }
             }
         }
     }
 
+    .classes-mobile {
+        display: none;
+    }
+
     .show {
         display: block !important;
     }
+}
+
+.service-img {
+    background-image: url('../images/regular-class.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.ticked {
+    color: $primary-blue;
+    padding-left: 1rem;
+}
+
+.disabled {
+    padding-left: 0.5rem;
+    color: $disabled-tabs-color;
 }
 
 footer {
@@ -582,6 +587,38 @@ footer {
         .tabs,
         .details {
             display: none;
+        }
+
+        .classes-mobile {
+            @include flex(center, center, nowrap);
+            flex-direction: column;
+            width: $main-container-width;
+            margin: auto;
+
+            .class-mobile {
+                @include flex(center, center, nowrap);
+                flex-direction: column;
+                width: 80%;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                border-top: 10px solid $secondary-blue;
+                background-color: $base-white;
+
+                h2 {
+                    color: $secondary-blue;
+                    font-size: 28px;
+                    margin: 1rem 0;
+                }
+            }
+
+            .mobile-info {
+                @include flex(flex-start, center, nowrap);
+                width: 90%;
+
+                ul {
+                    list-style-type: none;
+                }
+            }
         }
     }
 
