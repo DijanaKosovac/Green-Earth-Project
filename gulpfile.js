@@ -14,11 +14,11 @@ const jsPath = 'src/js/**/*.js';
 const cssPath = 'src/css/**/*.css';
 
 function copyHtml() {
-    return src('src/*.html').pipe(gulp.dest('dist'));
+    return src('*.html').pipe(gulp.dest('dist'));
 }
 
 function imgTask() {
-    return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('dist/images'));
+    return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('dist/src/images'));
 }
 
 function jsTask() {
@@ -27,7 +27,7 @@ function jsTask() {
         .pipe(concat('main.js'))
         .pipe(terser())
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('dist/js'));
+        .pipe(dest('dist/src/js'));
 }
 
 function cssTask() {
@@ -36,7 +36,7 @@ function cssTask() {
         .pipe(concat('style.css'))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write('.'))
-        .pipe(dest('dist/css'));
+        .pipe(dest('dist/src/css'));
 }
 
 
@@ -50,11 +50,11 @@ function style() {
 function watch() {
     browserSync.init({
         server: {
-            baseDir: 'src/.'
+            baseDir: './'
         }
     });
     gulp.watch('src/scss/**/*.scss', style);
-    gulp.watch('src/**.html').on('change', browserSync.reload);
+    gulp.watch('**.html').on('change', browserSync.reload);
     gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
 }
 

@@ -30,7 +30,7 @@ tabItems.forEach(item => {
 });
 
 function backgroundImageWithGradient(imageName) {
-    return `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('images/carousel-${imageName}.png') `;
+    return `linear-gradient(rgba(0,0,0, 0.4),rgba(0,0,0,0.4)),url('./src/images/carousel-${imageName}.png') `;
 }
 
 
@@ -58,12 +58,3 @@ arrowRight.addEventListener("click", function () {
         slider.style.backgroundImage = backgroundImageWithGradient('img3');
     }
 });
-
-
-
-
-
-
-
-
-
